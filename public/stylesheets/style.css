@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat&family=Open+Sans&family=Poppins:wght@500&family=Roboto&display=swap");
+/* font-family: 'Merriweather', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container-body {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle, #832de2, #4a00e0);
+}
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.login {
+  width: 350px;
+  height: 470px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.signup {
+  width: 350px;
+  height: 520px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.logo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.logo h2 {
+  color: #0652dd;
+  font-family: "Merriweather", serif;
+}
+.cnt img {
+  width: 130px;
+  height: 130px;
+  margin-bottom: 7px;
+}
+form .user-box {
+  position: relative;
+  margin-top: 10px;
+}
+form .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  color: #555;
+  background: transparent;
+  font-size: 16px;
+  margin-bottom: 25px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid indigo;
+}
+form .user-box input:focus {
+  border-bottom: 2px solid indigo;
+}
+form .user-box label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  font-size: 16px;
+  color: #555;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+form .user-box input:focus ~ label,
+form .user-box input:valid ~ label {
+  top: -15px;
+  left: 0;
+  color: indigo;
+  font-weight: bolder;
+}
+form a {
+  font-size: 14px;
+  float: right;
+  text-decoration: none;
+}
+form .btn-login {
+  background-color: indigo;
+  color: #fff;
+  border-radius: 25px;
+  font-size: 18px;
+  width: 180px;
+  align-items: center;
+  margin-top: 10px;
+  border: 2px solid indigo;
+}
+form .btn-login:hover {
+  background: transparent;
+  border: 2px solid indigo;
+  color: indigo;
+}
+form span {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.custom-class p {
+  font-size: 14px;
+  margin-top: 12px;
+}
+.custom-class a {
+  text-decoration: none;
+  color: indigo;
+}
+hr {
+  height: 3px;
+  background: indigo;
+  width: 30%;
+}
+.category-list .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  background-color: #006266;
+  padding: 10px 0;
+}
+
+.category-list .row h2 {
+  color: #f5f6fa;
+  text-align: center;
+}
+
+nav .navbar-nav a {
+  font-size: 18px;
+}
+
+.add-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.add-form .add {
+  border: 2px solid #746f6f;
+  padding: 0 11px;
+  width: 450px;
+}
+.add-form .add .row {
+  background-color: #006266;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.add-form .add .row h2 {
+  padding: 10px 0;
+}
+.add-form .add form {
+  margin: 10px;
+  text-align: center;
+}
+.add-form .add form .input-box {
+  margin-bottom: 20px;
+}
+.add-form .add form .input-box label {
+  font-size: 16px;
+  font-family: "Merriweather", serif;
+  margin-right: 10px;
+}
+.add-form .add form .input-box input {
+  font-size: 16px;
+  padding: 3px 7px;
+}
+.add-form .add form .input-box select {
+  width: 180px;
+  padding: 3px 7px;
+  margin-left: 10px;
+}
+.add-form .add form .input-box .btn {
+  font-size: 18px;
+}
+.add-form .add .col {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.add-form .add .col a {
+  text-decoration: none;
+  font-size: 17px;
+}
+.textarea {
+  display: flex;
+  flex-direction: column;
+}
+.textarea label {
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.textarea textarea {
+  width: 100px;
+}

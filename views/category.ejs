@@ -1,0 +1,89 @@
+<%- include('header')%>
+    <% if(dataDelete !='' ){ %>
+        <div class="alert alert-success alert-dismissible fade show text-center " role="alert">
+            <%=dataDelete %>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <%}%>
+            <div class="container category-list">
+                <div class="row">
+                    <h2>Password Category Lists</h2>
+                </div>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Password category name</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if(records.length> 0) {
+                            records.forEach(function(row){
+                            %>
+                            <tr>
+                                <th>
+                                    <%= row.categoryname %>
+                                </th>
+                                <td>
+                                    <a href="/category/edit/<%= row._id%>" style=" color: #0984e3;"><i
+                                            class="fa-regular fa-pen-to-square"></i></a>
+                                </td>
+                                <td>
+                                    <a href="/category/delete/<%= row._id%>" style="color: #d63031;"><i
+                                            class="fa-solid fa-trash"></i></a>
+                                </td>
+                            </tr>
+                            <% }) } %>
+                    </tbody>
+                </table>
+                <% if (pages> 0) { %>
+                    <nav>
+                        <ul class="pagination justify-content-center">
+                            <% if (current==1) { %>
+                                <li class="page-item disabled"><a class="page-link">First</a></li>
+                                <% } else { %>
+                                    <li class="page-item"><a href="/password/1" class="page-link">First</a></li>
+                                    <% } %>
+
+                                        <% var i=(Number(current)> 5 ? Number(current) - 4 : 1); %>
+                                            <% if (i !==1) { %>
+                                                <li class="page-item disabled"><a class="page-link">...</a></li>
+                                                <% } %>
+
+                                                    <% for (; i <=(Number(current) + 4) && i <=pages; i++) { %>
+                                                        <% if (i==current) { %>
+                                                            <li class="page-item active" aria-current="page"><a
+                                                                    class="page-link">
+                                                                    <%= i %>
+                                                                </a></li>
+                                                            <% } else { %>
+                                                                <li class="page-item"><a href="/password/<%= i %>"
+                                                                        class="page-link">
+                                                                        <%= i %>
+                                                                    </a></li>
+                                                                <% } %>
+
+                                                                    <% if (i==(Number(current) + 4) && i < pages) { %>
+                                                                        <li class="page-item disabled"><a
+                                                                                class="page-link">...</a></li>
+                                                                        <% } %>
+                                                                            <% } %>
+
+                                                                                <% if (current==pages) { %>
+                                                                                    <li class="page-item disabled"><a
+                                                                                            class="page-link">Last</a>
+                                                                                    </li>
+                                                                                    <% } else { %>
+                                                                                        <li class="page-item"><a
+                                                                                                href="/password/<%= pages %>"
+                                                                                                class="page-link">Last</a>
+                                                                                        </li>
+                                                                                        <% } %>
+                        </ul>
+                    </nav>
+                    <% } %>
+            </div>
+            </body>
+
+            </html>

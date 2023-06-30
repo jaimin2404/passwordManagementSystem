@@ -1,0 +1,30 @@
+<%- include('header')%>
+    <div class="add-form">
+        <div class="add">
+            <div class="row">
+                <h2>Edit category</h2>
+            </div>
+            <form action="/category/edit/<%= id %>" method="post">
+                <input type="hidden" name="categoryId" value="<%= id %>">
+                <div class="input-box">
+                    <label>Category Name</label>
+                    <input type="text" name="categoryName" id="category" value="<%= category.categoryname %>"
+                        autocapitalize="off">
+                </div>
+                <% if(errors!='' ) { %>
+                    <span style="color: red;margin-bottom:15px;"> *
+                        <%= errors.categoryName.msg%>
+                    </span>
+                    <% } %>
+                        <div class="input-box">
+                            <input type="submit" value="Update category" class="btn btn-primary">
+                        </div>
+            </form>
+            <div class="col">
+                <a href="/category">View all category</a>
+            </div>
+        </div>
+    </div>
+    </body>
+
+    </html>
